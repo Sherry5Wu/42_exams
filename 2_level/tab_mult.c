@@ -6,10 +6,59 @@
 /*   By: jingwu <jingwu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:29:09 by jingwu            #+#    #+#             */
-/*   Updated: 2024/07/10 13:29:21 by jingwu           ###   ########.fr       */
+/*   Updated: 2024/07/10 13:44:17 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
+int		ft_atoi(char *str)
+{
+	int		n = 0;
+	int 	i = 0;
+
+	while (str[i])
+	{
+		n = n * 10 + (str[i] - '0');
+		i++;
+	}
+	return (n);
+}
+
+void	print_num(int n)
+{
+	char	c;
+	
+	if (n > 10)
+		print_num (n /  10);
+	c = (n % 10) + '0';
+	write(1, &c, 1);
+}
+
+void	tab_mult(int n)
+{
+	int		i = 1;
+
+	while (i < 10)
+	{
+		print_num(i);
+		write(1, " x ", 3);
+		print_num(n);
+		write(1, " = ", 3);
+		print_num(i * n);
+		write(1, "\n", 1);
+		i++;
+	}
+}
+
+int		main(int ac, char **av)
+{
+	if (ac == 2)
+		tab_mult(ft_atoi(av[1]));
+	else
+		write(1, "\n", 1);
+	return (0);
+}
 
 /*
 Assignment name  : tab_mult
