@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jingwu <jingwu@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: jingwu <jingwu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 10:47:21 by jingwu            #+#    #+#             */
-/*   Updated: 2024/07/03 11:08:35 by jingwu           ###   ########.fr       */
+/*   Updated: 2024/07/15 13:09:05 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_strcpy(char *s1, char *s2)
 	return (s1);
 }
 
+
+// for test only
 #include <stdlib.h>
 #include <stdio.h>
 

@@ -6,7 +6,7 @@
 /*   By: jingwu <jingwu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 13:54:03 by jingwu            #+#    #+#             */
-/*   Updated: 2024/07/12 14:04:11 by jingwu           ###   ########.fr       */
+/*   Updated: 2024/07/15 08:43:27 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,35 @@ void sort_int_tab(int *tab, unsigned int size)
 	}
 }
 
+// solution 2
+# if 0
+void	swap_elements(int *tab, unsigned int p1, unsigned int p2)
+{
+	int tmp = tab[p1];
+	tab[p1] = tab[p2];
+	tab[p2] = tmp;
+}
+
+void	bubble_sort(int *tab, unsigned int size)
+{
+	unsigned int i = 0;
+	unsigned int j = 0;
+
+	while (i < size)
+	{
+		j = 0;
+		while (j < size - 1)
+		{
+			if (tab[j] > tab[j + 1])
+				swap_elements(tab, j, j + 1);
+			j++;
+		}
+		i++;
+	}
+}
+#endif
+
+// for testing only
 #include <stdio.h>
 
 void	print_arr(int *tab, unsigned int size)

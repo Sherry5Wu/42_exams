@@ -6,7 +6,7 @@
 /*   By: jingwu <jingwu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 08:36:58 by jingwu            #+#    #+#             */
-/*   Updated: 2024/07/05 08:55:23 by jingwu           ###   ########.fr       */
+/*   Updated: 2024/07/15 13:01:35 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,24 @@ the function returns 1; otherwise, it returns 0.
 int is_power_of_2(unsigned int n)
 {
     if (n == 0)
-        return 0;
-    return (n & (n - 1)) == 0;
+        return (0);
+    return ((n & (n - 1)) == 0);
 }
+
+// solution 2
+
+#if 0
+
+int		is_power_of_2(unsigned int n)
+{
+	if (n == 0)
+		return (0);
+	while (n % 2 == 0) 
+		n /= 2;
+	return ((n == 1) ? 1 : 0);
+}
+
+#endif
 
 #include <stdio.h>
 

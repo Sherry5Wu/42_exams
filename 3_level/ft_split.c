@@ -6,7 +6,7 @@
 /*   By: jingwu <jingwu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 11:13:47 by jingwu            #+#    #+#             */
-/*   Updated: 2024/07/11 14:19:05 by jingwu           ###   ########.fr       */
+/*   Updated: 2024/07/15 08:11:53 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ void 	copy_word(char *dest, char *src, int start, int end)
 		start++;
 	}
 	dest[i] = '\0';
-	printf("copy_word:%s\n", dest);
 }
 
 void	split_word(char **result, char *str, int words)

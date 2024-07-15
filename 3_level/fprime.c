@@ -6,7 +6,7 @@
 /*   By: jingwu <jingwu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:49:02 by jingwu            #+#    #+#             */
-/*   Updated: 2024/07/11 08:42:19 by jingwu           ###   ########.fr       */
+/*   Updated: 2024/07/12 14:28:17 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	fprime(int n)
 			}
 			else
 				printf("*%d", factor);
-			n /= factor;
+			n /= factor; // attention here
 		}
 		else
 			factor++;

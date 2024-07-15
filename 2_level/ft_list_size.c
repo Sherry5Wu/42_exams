@@ -6,37 +6,34 @@
 /*   By: jingwu <jingwu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 07:57:36 by jingwu            #+#    #+#             */
-/*   Updated: 2024/07/10 08:17:37 by jingwu           ###   ########.fr       */
+/*   Updated: 2024/07/15 11:58:16 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// typedef struct s_list
-// {
-// 	struct s_list 	*next;
-// 	void			*data;	
-// }	t_list;
-// int		ft_list_size(t_list *begin_list)
-// {
-// 	int		count;
-// 	t_list	*tmp;
-
-// 	count  = 0;
-// 	tmp = begin_list;
-// 	while (tmp)
-// 	{
-// 		count++;
-// 		tmp = tmp -> next;
-// 	}
-// 	return (count);
-// }
-
-// solution 2
 typedef struct s_list
 {
 	struct s_list 	*next;
 	void			*data;	
 }	t_list;
 
+#if 0
+int		ft_list_size(t_list *begin_list)
+{
+	int		count;
+	t_list	*tmp;
+
+	count  = 0;
+	tmp = begin_list;
+	while (tmp)
+	{
+		count++;
+		tmp = tmp -> next;
+	}
+	return (count);
+}
+#endif
+
+// solution 2
 int		ft_list_size(t_list *begin_list)
 {
 	if (!begin_list)
