@@ -6,7 +6,7 @@
 /*   By: jingwu <jingwu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 11:29:47 by jingwu            #+#    #+#             */
-/*   Updated: 2024/07/10 13:11:48 by jingwu           ###   ########.fr       */
+/*   Updated: 2024/07/16 07:54:38 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 /*
  loop the str, 
-  1. first pass all the characters that they aren't letters(a-zA-Z).
-  2. if the current character is in a-z, then convert it to uppercase
+  1. if the current character is in a-z, then convert it to uppercase
 	 if the next character IS space, tab or \0;
- 3. if the current character is in A-Z, then convert it to lowercase
+ 2. if the current character is in A-Z, then convert it to lowercase
 	if the next character is NOT space , tab or \0;
  
 */
@@ -27,21 +26,10 @@ void	rstr_c(char *str)
 
 	while (str[i])
 	{
-		while (str[i] && !(str[i] >= 65 && str[i] <= 90) && !(str[i] >= 97 && str[i] <= 122))
-		{
-			write(1, &str[i], 1);
-			i++;
-		}
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			if (str[i + 1] == 32 || str[i + 1] == '\t' || str[i + 1] == '\0')
-				str[i] -= 32;				
-		}
-		else if (str[i] >= 'A' && str[i] <= 'Z')	
-		{
-			if (str[i + 1] != 32 && str[i + 1] != '\t' && str[i + 1] != '\0')
-				str[i] += 32;	
-		}
+		if ((str[i] >= 'a' && str[i] <= 'z')  && (str[i + 1] == 32 || str[i + 1] == '\t' || str[i + 1] == '\0'))
+			str[i] -= 32;				
+		else if ((str[i] >= 'A' && str[i] <= 'Z') && (str[i + 1] != 32 && str[i + 1] != '\t' && str[i + 1] != '\0'))
+			str[i] += 32;	
 		write(1, &str[i], 1);
 		i++;
 	}

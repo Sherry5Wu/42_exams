@@ -6,7 +6,7 @@
 /*   By: jingwu <jingwu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:10:04 by jingwu            #+#    #+#             */
-/*   Updated: 2024/07/10 13:26:52 by jingwu           ###   ########.fr       */
+/*   Updated: 2024/07/16 07:51:18 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,10 @@ void	str_c(char *str)
 	
 	while (str[i])
 	{
-		while (str[i] && !(str[i] >= 'A' && str[i] <= 'Z') && !(str[i] >= 'a' && str[i] <= 'z'))
-		{
-			write(1, &str[i], 1);
-			i++;
-		}
-		if (str[i] >= 'A' && str[i] <= 'Z')
-		{
-			if (str[i - 1] != 32 && str[i - 1] != '\t')
-				str[i] += 32;
-		}
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			if (i == 0)
-				str[i] -= 32;
-			else if (str[i - 1] == 32 || str[i - 1] == '\t')
-				str[i] -= 32;
-		}
+		if ((str[i] >= 'A' && str[i] <= 'Z') && ( i != 0 && str[i - 1] != 32 && str[i - 1] != '\t'))
+			str[i] += 32;
+		else if ((str[i] >= 'a' && str[i] <= 'z') && (i == 0 || str[i - 1] == 32 || str[i - 1] == '\t'))
+			str[i] -= 32;
 		write(1, &str[i], 1);
 		i++;
 	}
