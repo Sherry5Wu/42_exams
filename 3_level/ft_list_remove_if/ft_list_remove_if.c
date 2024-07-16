@@ -6,7 +6,7 @@
 /*   By: jingwu <jingwu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 11:38:26 by jingwu            #+#    #+#             */
-/*   Updated: 2024/07/12 13:53:05 by jingwu           ###   ########.fr       */
+/*   Updated: 2024/07/16 11:24:49 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 		return ;
 	
 	tmp = *begin_list;
-	// when need to remove the first node
+	// when the first node is the needed delete note.
 	if (cmp(tmp ->data, data_ref) == 0)
 	{
 		*begin_list = tmp ->next;

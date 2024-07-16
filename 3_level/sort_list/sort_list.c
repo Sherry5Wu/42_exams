@@ -6,7 +6,7 @@
 /*   By: jingwu <jingwu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 08:56:49 by jingwu            #+#    #+#             */
-/*   Updated: 2024/07/12 11:25:49 by jingwu           ###   ########.fr       */
+/*   Updated: 2024/07/16 11:30:43 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 	while (tmp && (tmp -> next))
 	{
 		// if the current data and next data don't follow the order, then swap the datas.
+		// then the comparetion starts from the first node again.
 		if (cmp(tmp -> data,(tmp -> next) -> data) == 0)
 		{
 			n  = tmp -> data;

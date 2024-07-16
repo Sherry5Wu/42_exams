@@ -19,7 +19,7 @@ void	hcd(unsigned int n, unsigned int m)
 
 	// the highest common denominator can't be greater than the smallest
 	// of the two numbers
-	hdc = (n >= m)? m : n; 
+	hdc = (n >= m)? n : m; 
 	while (hdc > 0)
 	{
 		if (n % hdc == 0 && m % hdc == 0)

@@ -35,7 +35,6 @@ int     *ft_range(int start, int end)
 	return (array);
 }
 
-// for test only
 #include <stdio.h>
 #include <stdlib.h>
 

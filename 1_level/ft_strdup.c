@@ -6,7 +6,7 @@
 /*   By: jingwu <jingwu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 14:21:23 by jingwu            #+#    #+#             */
-/*   Updated: 2024/07/04 14:29:11 by jingwu           ###   ########.fr       */
+/*   Updated: 2024/07/16 08:20:47 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char    *ft_strdup(char *src)
 		return (NULL);
 	while (src[i])
 		i++;
-	newstr = malloc(sizeof(char) * i + 1);
+	newstr = malloc(sizeof(char) * (i + 1));
 	if (!newstr)
 		return (NULL);
 	newstr[i] = '\0';
