@@ -19,4 +19,7 @@ typedef struct    s_list
     void          *data;
 }                 t_list;
 
+//remeber to declare the function here.
+void    ft_list_foreach(t_list *begin_list, void (*f)(void *)); 
+
 #endif
