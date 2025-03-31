@@ -1,0 +1,16 @@
+
+Using Map container
+
+Spells: Fwoosh, Fireball, polymorph;
+
+Targets: Dummy, BrickWall;
+
+
+1. Fireball and Polymorph class are same as Fwoosh, so directly copy from Fwoosh, but
+   remember to change the class name and spells'name and effects based on the subject.
+
+2. BrickWall class is same as Dummy, they are targets. But remember to change the class
+   name and the type based on the subject.
+
+3. Make sure the Warlock and SpellBook classes's variables are decared using the same name,
+	the the deconstrutor, the learnSpell, forgetSpell function can be almost exactly same
