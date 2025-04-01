@@ -12,7 +12,7 @@ Warlock::~Warlock(){
 	std::map<std::string, ASpell*>::iterator end = spells_.end();
 	while (begin != end){
 		delete begin->second;
-		begin++;
+		++begin;
 	}
 	spells_.clear();
 }
@@ -37,8 +37,11 @@ void	Warlock::introduce() const{
 
 // carefule the for logic here
 void	Warlock::learnSpell(ASpell* spell){
-	if (spell){
-		spells_.insert(std::pair<std::string, ASpell*>(spell->getName(), spell->clone()));
+	if(spell){
+		std::map<std::string, ASpell*>::iterator it = spells_.find(spell->getName());
+		if (it == spells_.end()){
+			spells_.insert(std::pair<std::string, ASpell*>(spell->getName(), spell->clone()));
+		}
 	}
 }
 
@@ -51,9 +54,9 @@ void	Warlock::forgetSpell(const std::string& spellName){
 }
 
 void	Warlock::launchSpell(const std::string& spellName, const ATarget& target){
-	ASpell* spell = spells_[spellName];
-	if (spell){
-		spell->launch(target);
+	std::map<std::string, ASpell*>::iterator it = spells_.find(spellName);
+	if (it != spells_.end()){
+		it->second->launch(target);
 	}
 }
 

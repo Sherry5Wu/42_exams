@@ -2,6 +2,7 @@
 #include "Dummy.hpp"
 #include "Fwoosh.hpp"
 
+#if 0
 int main()
 {
   Warlock richard("Richard", "the Titled");
@@ -11,43 +12,46 @@ int main()
 
   richard.learnSpell(fwoosh);
 
-  richard.introduce();
-  richard.launchSpell("Fwoosh", bob);
+  // richard.introduce();
+  // richard.launchSpell("Fwoosh", bob);
 
-  richard.forgetSpell("Fwoosh");
-  richard.launchSpell("Fwoosh", bob);
+  // richard.forgetSpell("Fwoosh");
+  // richard.launchSpell("Fwoosh", bob);
 
   delete fwoosh; // remember to add here
 }
+#endif
 
-// int main(void)
-// {
-// 	std::cout << "--- Constructors:\n";
+#if 1
+int main(void)
+{
+	std::cout << "--- Constructors:\n";
 
-// 	Warlock richard("Richard", "Master of the Universe");
-// 	Fwoosh *spell = new Fwoosh();
-// 	Dummy targetPractice;
+	Warlock richard("Richard", "Master of the Universe");
+	Fwoosh *spell = new Fwoosh();
+	Dummy targetPractice;
 
-// 	std::cout << "--- \"Fwoosh\" not learned:\n";
+	std::cout << "--- \"Fwoosh\" not learned:\n";
 
-// 	richard.launchSpell("Fwoosh", targetPractice);
+	richard.launchSpell("Fwoosh", targetPractice);
 
-// 	std::cout << "--- \"Fwoosh\" learned:\n";
+	std::cout << "--- \"Fwoosh\" learned:\n";
 
-// 	richard.learnSpell(spell);
-// 	richard.launchSpell("Fwoosh", targetPractice);
+	richard.learnSpell(spell);
+	// richard.launchSpell("Fwoosh", targetPractice);
 
-// 	std::cout << "--- Forgotten \"Fwoosh\":\n";
+	// std::cout << "--- Forgotten \"Fwoosh\":\n";
 
-// 	richard.forgetSpell("Fwoosh");
-// 	richard.launchSpell("Fwoosh", targetPractice);
+	// richard.forgetSpell("Fwoosh");
+	// richard.launchSpell("Fwoosh", targetPractice);
 
-// 	std::cout << "--- Non-existant spell:\n";
+	// std::cout << "--- Non-existant spell:\n";
 
-// 	richard.launchSpell("Splash", targetPractice);
-// 	richard.forgetSpell("Splash");
-// 	richard.launchSpell("Splash", targetPractice);
+	// richard.launchSpell("Splash", targetPractice);
+	// richard.forgetSpell("Splash");
+	// richard.launchSpell("Splash", targetPractice);
 
-// 	std::cout << "--- Destructors:\n";
-// 	return (0);
-// }
+  delete spell;
+	return (0);
+}
+#endif

@@ -1,0 +1,15 @@
+1.
+Using Map container : so can't have dupicated keyword, before learnSpell or
+learnTargetType should check if it exits in the map already.
+
+ASpell and ATarget are similar;
+
+2. Dummy and Fwoosh are similar;
+
+3. Add new attribute map into warlock and three new functions into Warlock:
+	learnSpell, forgetSpell, launchSpell
+
+	after adding the map, remember to delete it in the deconstrutor.
+
+4. For testing:
+	add extra launch and forget a non-existant spell test cases into main.

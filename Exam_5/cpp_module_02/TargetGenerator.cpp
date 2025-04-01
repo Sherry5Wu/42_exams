@@ -13,8 +13,11 @@ TargetGenerator::~TargetGenerator(){
 }
 
 void TargetGenerator::learnTargetType(ATarget* target){
-	if(target){
-		targets_.insert(std::pair<std::string, ATarget*>(target->getType(), target->clone()));
+	if (target){
+		std::map<std::string, ATarget*>::iterator	it = targets_.find(target->getType());
+		if (it == targets_.end()){
+			targets_.insert(std::pair<std::string, ATarget*>(target->getType(), target->clone()));
+		}
 	}
 }
 
@@ -36,13 +39,13 @@ ATarget* TargetGenerator::createTarget(std::string const & name){
 
 
 /*<------------------for debugging------------------->*/
-// void	TargetGenerator::printTargets(){
-// 	std::map<std::string, ATarget*>::iterator begin = targets_.begin();
-// 	std::map<std::string, ATarget*>::iterator end = targets_.end();
-// 	std::cout << "Targets are: ";
-// 	while (begin != end){
-// 		 std::cout << begin->first << ", ";
-// 		++begin;
-// 	}
-// 	std::cout << std::endl;
-// }
+void	TargetGenerator::printTargets(){
+	std::map<std::string, ATarget*>::iterator begin = targets_.begin();
+	std::map<std::string, ATarget*>::iterator end = targets_.end();
+	std::cout << "Targets are: ";
+	while (begin != end){
+		 std::cout << begin->first << ", ";
+		++begin;
+	}
+	std::cout << std::endl;
+}

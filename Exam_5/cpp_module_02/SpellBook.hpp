@@ -6,7 +6,7 @@
 /*   By: jingwu <jingwu@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 10:01:03 by jingwu            #+#    #+#             */
-/*   Updated: 2025/03/31 13:11:27 by jingwu           ###   ########.fr       */
+/*   Updated: 2025/04/01 09:51:44 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class SpellBook{
 		ASpell*	createSpell(std::string const & name);
 
 		// for debugging
-		// void	printSpells();
+		void	printSpells();
 
 	private:
 		std::map<std::string, ASpell*> spells_;

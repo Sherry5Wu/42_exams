@@ -6,7 +6,7 @@
 #include "Fireball.hpp"
 #include "TargetGenerator.hpp"
 
-#if 0
+#if 1
 int main()
 {
   Warlock richard("Richard", "foo");
@@ -44,7 +44,7 @@ void	printInColor(const std::string&  msg, std::string color){
 }
 
 
-#if 1
+#if 0
 int main(void)
 {
 	printInColor("<---------------constructor--------------->", GREEN);
@@ -56,12 +56,13 @@ int main(void)
 	Fwoosh *air = new Fwoosh();
 	richard.learnSpell(water);
 	richard.learnSpell(fire);
+	richard.learnSpell(fire);
 	richard.forgetSpell("Fwoosh");
 	richard.learnSpell(air);
 	richard.forgetSpell("Fwoosh");
 	richard.forgetSpell("Fwoosh");
 	richard.learnSpell(air);
-  richard.printBook();
+  	richard.printBook();
 
 	printInColor("\n<---------------Targets--------------->", GREEN);
 	Dummy *hay = new Dummy();
@@ -69,6 +70,7 @@ int main(void)
 
 	TargetGenerator tarGen;
 	tarGen.learnTargetType(hay);
+	tarGen.learnTargetType(earth);
 	tarGen.learnTargetType(earth);
   	tarGen.printTargets();
 
@@ -100,7 +102,6 @@ int main(void)
 	printInColor("\n<---------------Non existant target--------------->", GREEN);
 	richard.launchSpell("Fwoosh", *tarGen.createTarget("I am not a target"));
 
-	printInColor("\n<---------------Destructors::--------------->", GREEN);
 	delete water;
 	delete fire;
 	delete air;

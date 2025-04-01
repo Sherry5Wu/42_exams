@@ -6,7 +6,7 @@
 /*   By: jingwu <jingwu@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 10:46:25 by jingwu            #+#    #+#             */
-/*   Updated: 2025/03/31 13:11:09 by jingwu           ###   ########.fr       */
+/*   Updated: 2025/04/01 09:47:33 by jingwu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class TargetGenerator{
 		ATarget* createTarget(std::string const & name);
 
 		// for debugging
-		// void	printTargets();
+		void	printTargets();
 
 	private:
 		std::map<std::string, ATarget*>	targets_;

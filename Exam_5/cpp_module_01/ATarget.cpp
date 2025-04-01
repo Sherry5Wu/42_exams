@@ -12,7 +12,7 @@ ATarget&	ATarget::operator=(const ATarget& other){
 	return *this;
 }
 
-ATarget::ATarget(std::string type) : type_(type){}
+ATarget::ATarget(const std::string& type) : type_(type){}
 
 ATarget::~ATarget(){}
 

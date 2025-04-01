@@ -60,9 +60,9 @@ void	Warlock::forgetSpell(const std::string& spellName){
 
 void	Warlock::launchSpell(const std::string& spellName, const ATarget& target){
 	// ex_01
-	// ASpell* spell = spells_[spellName];
-	// if (spell){
-	// 	spell->launch(target);
+	// std::map<std::string, ASpell*>::iterator it = spells_.find(spellName);
+	// if (it != spells_.end()){
+	// 	it->second->launch(target);
 	// }
 
 	//ex_02
@@ -79,6 +79,6 @@ void	Warlock::launchSpell(const std::string& spellName, const ATarget& target){
 
 
 // for bebugging
-// void	Warlock::printBook(){
-// 	this->book_.printSpells();
-// }
+void	Warlock::printBook(){
+	this->book_.printSpells();
+}

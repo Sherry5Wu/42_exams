@@ -1,0 +1,9 @@
+Just one class Warlock:
+
+1. put default constructor, copy constructor and Assignment operator
+   into private;
+
+2. Main function: getName, getTitle,and introduce. Remember
+   the "const" word.
+
+   setTitle , no const;

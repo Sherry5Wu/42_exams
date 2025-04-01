@@ -1,5 +1,6 @@
 
-Using Map container
+Using Map container : so can't have dupicated keyword, before learnSpell or
+learnTargetType should check if it exits in the map already.
 
 Spells: Fwoosh, Fireball, polymorph;
 

@@ -9,6 +9,9 @@
 // #include "ASpell.hpp" // rember to added this include here ex_01
 #include "SpellBook.hpp"
 
+// class SpellBook; // checking when we can use class SpellBook, when we need to include.
+// how to correct chekcing which one we should choose.
+
 class Warlock{
 	private:
 		std::string	name_;
@@ -39,6 +42,6 @@ class Warlock{
 		void	launchSpell(const std::string& spell, const ATarget& target);
 
 		// for debugging
-		// void	printBook();
+		void	printBook();
 };
 
