@@ -36,6 +36,8 @@ void	Warlock::introduce() const{
 /*--------------------------added at exercise_02-------------------------------------------*/
 
 // carefule the for logic here
+// in the exam subject, it asks the spell needs to be unique, so remember to loope the spells_
+// first, if can't find the spell, then you insert.
 void	Warlock::learnSpell(ASpell* spell){
 	if(spell){
 		std::map<std::string, ASpell*>::iterator it = spells_.find(spell->getName());
