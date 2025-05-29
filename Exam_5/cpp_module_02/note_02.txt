@@ -13,5 +13,5 @@ Targets: Dummy, BrickWall;
 2. BrickWall class is same as Dummy, they are targets. But remember to change the class
    name and the type based on the subject.
 
-3. Make sure the Warlock and SpellBook classes's variables are decared using the same name,
-	the the deconstrutor, the learnSpell, forgetSpell function can be almost exactly same
+3. Make sure the Warlock and SpellBook classes's variables are declared using the same name,
+	deconstrutor, learnSpell, forgetSpell function can be almost exactly same
