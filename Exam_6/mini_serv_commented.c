@@ -40,14 +40,15 @@ void send_all(char* msg, int arg, int owner_fd) {
 }
 
 int main(int ac, char** av) {
-    int port;
+	if (ac != 2){
+        	return ft_error("Wrong number of arguments\n");
+	}
+	int port = atoi(av[1]);
     signal(SIGINT, handle_sigint);  // Register signal handler for graceful shutdown
 
-    if (ac != 2)
-        return ft_error("Wrong number of arguments\n");
+
 
     // Convert port argument to integer and validate
-    port = atoi(av[1]);
     if (port < 1 || port > 65535)
         return ft_error("Fatal error\n");
 
